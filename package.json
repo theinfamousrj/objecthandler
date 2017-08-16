@@ -1,0 +1,34 @@
+{
+  "name": "object-handler",
+  "version": "0.0.1",
+  "description": "A simple object handler for handling objects. Allows searching for required properties and things of that nature. Works really well with requests in express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theinfamousrj/objecthandler.git"
+  },
+  "keywords": [
+    "cheap",
+    "deep",
+    "copy",
+    "node"
+  ],
+  "author": "Raymond John Hill <raymondjohnhill@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theinfamousrj/objecthandler/issues"
+  },
+  "homepage": "https://github.com/theinfamousrj/objecthandler#readme",
+  "devDependencies": {
+    "chai": "*",
+    "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*"
+  }
+}
