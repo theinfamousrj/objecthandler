@@ -9,19 +9,23 @@ A simple object handler for handling objects. Allows searching for required prop
 
 ```
 $ npm install object-handler
+
 ```
 
-<!--# Use-->
+# Use
 
-<!--Super simple to use, newObject becomes a deep copy of objectToCopy.-->
+Check an object for properties in an intuitive sort of way.
 
-<!--```javascript-->
-<!--const CopyMachine = require('cheapcopy');-->
+```javascript
+const objHandler = require('object-handler');
 
-<!--let objectToCopy = { someString: "Certainly a string.", horse: true, potion: 1 };-->
+let objectToCheck = { someString: "Certainly a string.", horse: true, potion: 1, obby: { deeper: true, deepness: { stophere: false, evenDeeper: { wow: 'that is deep', right: { nope: 'we can go deeper' } } } } };
+let requiredProperties = ['someString', 'obby', 'obby.deepness.evenDeeper.wow'];
 
-<!--let newObject = CopyMachine.copy(objectToCopy);-->
-<!--```-->
+if( objHandler.hasRequiredProperties(objectToCheck, requiredProperties) ) {
+  //do stuff with confidence 
+};
+```
 
 # License
 MIT License
