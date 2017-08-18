@@ -1,6 +1,6 @@
 {
   "name": "object-handler",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A simple object handler for handling objects. Allows searching for required properties and things of that nature. Works really well with requests in express.",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,10 @@
     "url": "git+https://github.com/theinfamousrj/objecthandler.git"
   },
   "keywords": [
-    "cheap",
-    "deep",
-    "copy",
+    "object",
+    "handler",
+    "required",
+    "parameters",
     "node"
   ],
   "author": "Raymond John Hill <raymondjohnhill@gmail.com>",
