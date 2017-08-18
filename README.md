@@ -1,4 +1,4 @@
-# cheapcopy
+# object-handler
 [![Build Status](https://travis-ci.org/theinfamousrj/objecthandler.svg?branch=master)](https://travis-ci.org/theinfamousrj/objecthandler)
 [![Coverage Status](https://coveralls.io/repos/github/theinfamousrj/objecthandler/badge.svg?branch=master)](https://coveralls.io/github/theinfamousrj/objecthandler?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/theinfamousrj/objecthandler/badge.svg)](https://snyk.io/test/github/theinfamousrj/objecthandler)
