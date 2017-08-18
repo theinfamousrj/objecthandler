@@ -38,7 +38,7 @@ describe('.getKeys()', () => {
     })
     
     it('ensures that if you pass it nothing, it dies', (done) => {
-        expect(ObjHandler.hasRequiredKeys).to.throw(Error, 'Item to check must be an object.')
+        expect(ObjHandler.getKeys).to.throw(Error, 'Item to check must be an object.')
         done()
     })
 })
@@ -47,7 +47,7 @@ describe('.hasRequiredKeys()', () => {
     it('ensures that the required keys exist in the object', (done) => {
         let objectToGetKeysOf = { someString: "Certainly a string.", horse: true, potion: 1, obby: { deeper: true, deepness: { stophere: false, evenDeeper: { wow: 'that is deep', right: { nope: 'we can go deeper' } } } } }
         let expectedKeys = ['someString', 'horse', 'potion', 'obby', 'obby.deeper', 'obby.deepness', 'obby.deepness.stophere', 'obby.deepness.evenDeeper', 'obby.deepness.evenDeeper.right.nope']
-        let hasKeys = ObjHandler.hasRequiredKeys(objectToGetKeysOf, expectedKeys)
+        let hasKeys = ObjHandler.hasRequiredProperties(objectToGetKeysOf, expectedKeys)
         
         expect(hasKeys).to.be.true
         done()
@@ -56,7 +56,7 @@ describe('.hasRequiredKeys()', () => {
     it('ensures that if required keys are missing, the result is clear', (done) => {
         let objectToGetKeysOf = { someString: "Certainly a string.", horse: true, potion: 1, obby: { deeper: true, deepness: { stophere: false, evenDeeper: { wow: 'that is deep', right: { nope: 'we can go deeper' } } } } }
         let expectedKeys = ['someString', 'horse', 'potion', 'obby', 'obby.deeper', 'obby.deepness', 'obby.deepness.stophere', 'whyAskWhy.drinkBudDry']
-        let hasKeys = ObjHandler.hasRequiredKeys(objectToGetKeysOf, expectedKeys)
+        let hasKeys = ObjHandler.hasRequiredProperties(objectToGetKeysOf, expectedKeys)
         
         expect(hasKeys).to.be.false
         done()
@@ -65,7 +65,7 @@ describe('.hasRequiredKeys()', () => {
     it('ensures that if you pass it no required keys, it returns true', (done) => {
         let objectToGetKeysOf = { someString: "Certainly a string.", horse: true, potion: 1, obby: { deeper: true, deepness: { stophere: false, evenDeeper: { wow: 'that is deep', right: { nope: 'we can go deeper' } } } } }
         let expectedKeys = []
-        let hasKeys = ObjHandler.hasRequiredKeys(objectToGetKeysOf, expectedKeys)
+        let hasKeys = ObjHandler.hasRequiredProperties(objectToGetKeysOf, expectedKeys)
         
         expect(hasKeys).to.be.true
         done()
@@ -76,12 +76,12 @@ describe('.hasRequiredKeys()', () => {
         let expectedKeys = ['someString', 'horse', 'potion', 'obby', 'obby.deeper', 'obby.deepness', 'obby.deepness.stophere', 'whyAskWhy.drinkBudDry']
         //let hasKeys = ObjHandler.hasRequiredKeys(nonObjectToGetKeysOf, expectedKeys)
         
-        expect(function () { ObjHandler.hasRequiredKeys(nonObjectToGetKeysOf, expectedKeys); }).to.throw(Error, 'Item to check must be an object.')
+        expect(function () { ObjHandler.hasRequiredProperties(nonObjectToGetKeysOf, expectedKeys); }).to.throw(Error, 'Item to check must be an object.')
         done()
     })
     
     it('ensures that if you pass it nothing, it dies', (done) => {
-        expect(ObjHandler.hasRequiredKeys).to.throw(Error, 'Item to check must be an object.')
+        expect(ObjHandler.hasRequiredProperties).to.throw(Error, 'Item to check must be an object.')
         done()
     })
 })
