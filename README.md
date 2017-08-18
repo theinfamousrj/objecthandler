@@ -18,7 +18,24 @@ Check an object for properties in an intuitive sort of way.
 ```javascript
 const objHandler = require('object-handler');
 
-let objectToCheck = { someString: "Certainly a string.", horse: true, potion: 1, obby: { deeper: true, deepness: { stophere: false, evenDeeper: { wow: 'that is deep', right: { nope: 'we can go deeper' } } } } };
+let objectToCheck = { 
+  someString: "Certainly a string.", 
+  horse: true, 
+  potion: 1, 
+  obby: {
+  
+    deeper: true, 
+    deepness: { 
+      stophere: false, 
+      evenDeeper: { 
+        wow: 'that is deep', 
+        right: { nope: 'we can go deeper' }
+      }
+    }
+    
+  }
+};
+
 let requiredProperties = ['someString', 'obby', 'obby.deepness.evenDeeper.wow'];
 
 if( objHandler.hasRequiredProperties(objectToCheck, requiredProperties) ) {
