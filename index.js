@@ -10,7 +10,7 @@ module.exports = {
         keys.push(curr)
     }
   },
-  hasRequiredKeys: function(obj, keys) {
+  hasRequiredProperties: function(obj, keys) {
     if(typeof obj !== 'object') throw new Error('Item to check must be an object.')
     
     let objKeys = []
