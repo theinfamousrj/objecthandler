@@ -7,9 +7,8 @@ A simple object handler for handling objects. Allows searching for required prop
 
 # Install
 
-```
+```{r, engine='bash', count_lines}
 $ npm install object-handler
-
 ```
 
 # Use
