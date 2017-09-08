@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/theinfamousrj/objecthandler.svg?branch=master)](https://travis-ci.org/theinfamousrj/objecthandler)
 [![Coverage Status](https://coveralls.io/repos/github/theinfamousrj/objecthandler/badge.svg?branch=master)](https://coveralls.io/github/theinfamousrj/objecthandler?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/theinfamousrj/objecthandler/badge.svg)](https://snyk.io/test/github/theinfamousrj/objecthandler)
+[![Bless](https://cdn.rawgit.com/LunaGao/BlessYourCodeTag/master/tags/ramen.svg)](http://lunagao.github.io/BlessYourCodeTag/)
 
 A simple object handler for handling objects. Allows searching for required properties and things of that nature. Works really well with requests in express.
 
